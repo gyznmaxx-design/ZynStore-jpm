@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZynStore JPM</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #08090e;
+  color: white;
+}
+
+header {
+  padding: 25px 20px;
+  text-align: center;
+  background: #0d0f16;
+  border-bottom: 1px solid #222;
+}
+
+header h1 {
+  color: #ffd000;
+  font-size: 28px;
+}
+
+header p {
+  color: #999;
+  margin-top: 7px;
+}
+
+.container {
+  max-width: 650px;
+  margin: auto;
+  padding: 20px 15px;
+}
+
+.title {
+  color: #ffd000;
+  font-size: 21px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.product {
+  position: relative;
+  background: #10121a;
+  border-radius: 18px;
+  padding: 18px 12px;
+  text-align: center;
+  border: 1px solid #191c26;
+}
+
+.discount {
+  position: absolute;
+  top: -8px;
+  right: 8px;
+  background: #ffd000;
+  color: #111;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.product h2 {
+  font-size: 17px;
+  margin-top: 8px;
+}
+
+.price {
+  color: #ffd000;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.stock {
+  color: #00b894;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.buy {
+  width: 100%;
+  border: none;
+  background: #ffd000;
+  color: #111;
+  padding: 12px 5px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.buy:active {
+  transform: scale(.97);
+}
+
+.info {
+  margin-top: 30px;
+  background: #10121a;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.info h2 {
+  color: #ffd000;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.info p {
+  margin: 10px 0;
+  color: #bbb;
+  line-height: 1.5;
+}
+
+.green {
+  color: #00b894;
+}
+
+.warning {
+  color: #ffcc00;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  color: #666;
+  font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>ZynStore JPM</h1>
+  <p>Panel Member JPM • Proses Cepat & Otomatis</p>
+</header>
+
+<div class="container">
+
+  <div class="title">🔥 PILIH PAKET MEMBER</div>
+
+  <div class="products">
+
+    <div class="product">
+      <span class="discount">50%</span>
+      <h2>5 Member</h2>
+      <div class="price">Rp2.000</div>
+      <div class="stock">● Stok tersedia</div>
+      <button class="buy" onclick="order('5 Member','Rp2.000')">
+        Pilih Produk
+      </button>
+    </div>
+
+    <div class="product">
+      <span class="discount">50%</span>
+      <h2>10 Member</h2>
+      <div class="price">Rp4.000</div>
+      <div class="stock">● Stok tersedia</div>
+      <button class="buy" onclick="order('10 Member','Rp4.000')">
+        Pilih Produk
+      </button>
+    </div>
+
+    <div class="product">
+      <span class="discount">50%</span>
+      <h2>15 Member</h2>
+      <div class="price">Rp6.000</div>
+      <div class="stock">● Stok tersedia</div>
+      <button class="buy" onclick="order('15 Member','Rp6.000')">
+        Pilih Produk
+      </button>
+    </div>
+
+    <div class="product">
+      <span class="discount">50%</span>
+      <h2>20 Member</h2>
+      <div class="price">Rp8.000</div>
+      <div class="stock">● Stok tersedia</div>
+      <button class="buy" onclick="order('20 Member','Rp8.000')">
+        Pilih Produk
+      </button>
+    </div>
+
+    <div class="product">
+      <span class="discount">50%</span>
+      <h2>25 Member</h2>
+      <div class="price">Rp10.000</div>
+      <div class="stock">● Stok tersedia</div>
+      <button class="buy" onclick="order('50 Member','Rp10.000')">
+        Pilih Produk
+      </button>
+    </div>
+
+    <div class="product">
+      <span class="discount">50%</span>
+      <h2>30 Member</h2>
+      <div class="price">Rp12.000</div>
+      <div class="stock">● Stok tersedia</div>
+      <button class="buy" onclick="order('30 Member','Rp12.000')">
+        Pilih Produk
+      </button>
+    </div>
+
+  </div>
+
+  <div class="info">
+    <h2>KEUNTUNGAN JPM</h2>
+
+    <p class="green">✔ Proses cepat</p>
+    <p class="green">✔ Harga terjangkau</p>
+    <p class="green">✔ Tanpa biaya tambahan</p>
+    <p class="green">✔ Tanpa antre</p>  
+  </div>
+
+  <div class="info">
+    <h2>RULES JPM</h2>
+
+    <p class="warning">⚠️ Pastikan data yang diberikan benar</p>
+    <p class="warning">⚠️ Jangan melakukan spam</p>
+    <p class="warning">⚠️ Ikuti ketentuan layanan</p>
+    <p class="warning">⚠️dilarang ikut push mem ketika proses berlangsungnya,larang? proses di anggap selesai</p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 ZynStore JPM
+</footer>
+
+<script>
+function order(produk, harga) {
+
+  const nomorAdmin = "083146810467";
+
+  const pesan =
+    "Halo Admin ZynStore JPM,%0A%0A" +
+    "Saya ingin membeli:%0A" +
+    "Produk: " + produk + "%0A" +
+    "Harga: " + harga;
+
+  window.location.href =
+    "https://wa.me/" + nomorAdmin + "?text=" + pesan;
+}
+</script>
+
+</body>
+  </html>
